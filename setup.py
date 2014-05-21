@@ -74,7 +74,7 @@ setuptools.setup(
             'drt-driver = docker_registry.tools.driver:main',
         ]
     },
-    install_requires=open('./requirements.txt').read(),
+    install_requires=requirements,
     tests_require=open('./requirements-test.txt').read(),
     extras_require={
         'style': open('./requirements-style.txt').read(),
