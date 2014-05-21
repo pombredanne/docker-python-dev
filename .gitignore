@@ -1,5 +1,18 @@
+*.log
+*.pot
+*.pyc
+*.sw[p-z]
+*.db
+.DS_Store
+.idea
+.dotcloud
 .coverage
 .tox
+htmlcov
+config/config.yml
+config/*.pem
+newrelic.ini
+reports
 
 # Packages
 *.egg
@@ -7,10 +20,10 @@
 dist
 build
 eggs
-tmp
 
-*.DS_Store
+Vagrantfile
+.vagrant
 
-*.pyc
+*tmp
 
-/tests/reports/
+*.sublime-workspace

@@ -1,5 +1,3 @@
 - provide a kingpin boot like script
 - enhance core tests so they say what's wrong
 - bug reporting tools
-- create docker-style and docker-tests packages (or distributions for docker-core / tools, including command line tools
-- find a way to configure flake8 globally (setup.cfg or anything else)
