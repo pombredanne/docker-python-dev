@@ -12,3 +12,5 @@ install:
   - pip install .
 
 script: flake8 && python setup.py nosetests
+
+after_success: coveralls

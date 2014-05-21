@@ -4,6 +4,7 @@ This is a collection of [docker-registry](https://github.com/dotcloud/docker-reg
 
 [![PyPI version][pypi-image]][pypi-url]
 [![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 
 ## Installation
 
@@ -31,5 +32,6 @@ This is licensed under the Apache license.
 [travis-url]: http://travis-ci.org/dmp42/docker-registry-tools
 [travis-image]: https://secure.travis-ci.org/dmp42/docker-registry-tools.png?branch=master
 
-
+[coveralls-url]: https://coveralls.io/r/dmp42/docker-registry-tools
+[coveralls-image]: https://coveralls.io/repos/dmp42/docker-registry-tools/badge.png?branch=master
 
