@@ -98,6 +98,7 @@ def main(args=None):
         os.path.join('docker_registry', 'drivers', '%s.py' % driver['name']))
     files.append('README.md')
     files.append('setup.py')
+    files.append('tests/test.py')
 
     reps = {
         '{{driver.name}}': driver['name'],
