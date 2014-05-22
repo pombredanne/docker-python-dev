@@ -17,7 +17,7 @@ Right now, this is work in progress.
  * `dpy sanity`: sanity check the docker python project
  * `dpy style`: style check the docker python project
  * `dpy test`: test the docker python project
- * `dpy test-all`: test all python version the docker python project
+ * `dpy test-all`: same as test, for all supported python versions
 
 If you want to create a new storage driver for `docker-registry`:
 
