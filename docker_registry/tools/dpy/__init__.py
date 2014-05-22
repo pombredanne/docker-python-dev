@@ -156,6 +156,8 @@ def getpypi(name, version):
     if not only_register:
         setuptools('sdist', 'upload')
 
+    printer.info('You should bump your package version NOW.')
+
     # Stackbrew to be done
     # raw_input()
 
