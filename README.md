@@ -1,6 +1,7 @@
-# Docker registry tools (a.k.a. "DoctoR Tools")
+# Docker python developer tools (a.k.a. "dpy")
 
-This is a collection of [docker-registry](https://github.com/dotcloud/docker-registry/) helper tools, meant to ease the development, test and maintainance of backend drivers and other docker-registry related code.
+This is a collection of tools meant to ease life of docker python workers.
+Right now, this is work in progress.
 
 [![PyPI version][pypi-image]][pypi-url]
 [![Build Status][travis-image]][travis-url]
@@ -10,17 +11,18 @@ This is a collection of [docker-registry](https://github.com/dotcloud/docker-reg
 
 `pip install docker-python-dev`
 
-You may then alias `docker-python-dev` in your .bashrc / .zshrc / .profile (say, as `alias drt=docker-python-dev`).
-
 ## Usage
 
-If you want to create a new storage driver for docker-registry:
+ * all commands support an additional `-d PATH` argument
+ * `dpy sanity`: sanity check the docker python project
+ * `dpy style`: style check the docker python project
+ * `dpy test`: test the docker python project
+ * `dpy test-all`: test all python version the docker python project
 
-`drt driver --new`
+If you want to create a new storage driver for `docker-registry`:
 
-If you want to run sanity checks on an existing driver
+ * `dpy-driver new`
 
-`drt driver --audit`
 
 ## License
 

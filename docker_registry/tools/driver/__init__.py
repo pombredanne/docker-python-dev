@@ -28,7 +28,7 @@ parser = argparse.ArgumentParser(description=description,
                                  formatter_class=argparse.RawTextHelpFormatter)
 
 parser.add_argument(
-    'command', choices=['new', 'audit'], nargs=1, help='Specify what to do')
+    'command', choices=['new'], nargs=1, help='Specify what to do')
 parser.add_argument('-d', '--dir', help='Path to the driver (defaults to cwd)')
 
 
@@ -67,17 +67,17 @@ def main(args=None):
         'copyright': 'Copyright 2014'
     }
 
-    if args.command[0] == 'new':
-        logger.info('Going to create a new empty driver in directory %s' %
-                    cur_dir)
-        driver['name'] = prompt(
-            'You driver name (lowercase, alpha only)', 'my-driver')
-        driver['author']['name'] = prompt('Your name', gitconfig('user.name'))
-        driver['author']['nick'] = prompt(
-            'Your github nick', gitconfig('github.user'))
-        driver['author']['mail'] = prompt(
-            'Your email', gitconfig('user.email'))
-        driver['copyright'] = prompt('Copyright', 'Copyright 2014')
+    # if args.command[0] == 'new':
+    logger.info('Going to create a new empty driver in directory %s' %
+                cur_dir)
+    driver['name'] = prompt(
+        'You driver name (lowercase, alpha only)', 'my-driver')
+    driver['author']['name'] = prompt('Your name', gitconfig('user.name'))
+    driver['author']['nick'] = prompt(
+        'Your github nick', gitconfig('github.user'))
+    driver['author']['mail'] = prompt(
+        'Your email', gitconfig('user.email'))
+    driver['copyright'] = prompt('Copyright', 'Copyright 2014')
 
     src = os.path.join(
         os.path.dirname(__file__), '..', '..', '..', 'scaffold', 'driver')

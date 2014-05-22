@@ -129,8 +129,6 @@ def nose(path=None):
 
 
 def getpypi(name, version):
-    only_register = False
-
     try:
         import xmlrpclib
     except ImportError:
@@ -140,7 +138,6 @@ def getpypi(name, version):
     rez = client.package_releases(name)
     if not len(rez):
         printer.warn('That package is not published on pypi it seems.')
-        only_register = True
     else:
         rez = rez.pop()
         printer.info('Package found on pypi. Versions: %s' % rez)
@@ -153,8 +150,8 @@ def getpypi(name, version):
     # Tag
     git('tag', version)
     git('push', '--follow-tags')
-    if not only_register:
-        setuptools('sdist', 'upload')
+
+    setuptools('sdist', 'upload')
 
     printer.info('You should bump your package version NOW.')
 
