@@ -14,11 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from mock import patch
+import mock
 import os
 import shutil
 
-import docker_registry.tools.driver as driver
+from docker_registry.tools import driver
 
 
 def prompt(desc, default=None):
@@ -31,7 +31,7 @@ class TestDriver():
         if os.path.exists('./tmp'):
             shutil.rmtree('./tmp')
 
-    @patch('docker_registry.tools.driver.prompt', prompt)
+    @mock.patch('docker_registry.tools.driver.prompt', prompt)
     def test_new(self):
         driver.main(['new', '-d', './tmp'])
         assert os.path.exists('./tmp/docker-registry-driver-my-driver')

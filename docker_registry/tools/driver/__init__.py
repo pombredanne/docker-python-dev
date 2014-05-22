@@ -109,14 +109,14 @@ def main(args=None):
     }
 
     for key in files:
-        src = open(os.path.join(dest, key), 'r+')
-        data = src.read()
+        src = open(os.path.join(dest, key), 'rb+')
+        data = src.read().decode('utf8')
         for k in reps.keys():
-            data = data.replace(k, reps[k])
+            data = data.replace(k, str(reps[k]))
 
         src.truncate(0)
         src.seek(0)
-        src.write(data)
+        src.write(data.encode('utf8'))
 
 if __name__ == "__main__":
     main()

@@ -39,6 +39,8 @@ __description__ = 'Docker registry {{driver.name}} driver'
 __download__ = 'https://github.com/%s/%s/archive/master.zip' % (
     '{{driver.author.nick}}', __title__)
 
+__keywords__ = 'docker registry driver'
+
 setuptools.setup(
     name=__title__,
     version=__version__,
@@ -48,6 +50,7 @@ setuptools.setup(
     maintainer_email=__email__,
     url=__url__,
     description=__description__,
+    keywords=__keywords__,
     long_description=open('./README.md').read(),
     download_url=__download__,
     namespace_packages=['docker_registry', 'docker_registry.drivers'],
@@ -68,5 +71,5 @@ setuptools.setup(
     zip_safe=True,
     test_suite='nose.collector',
     install_requires=open('./requirements.txt').read(),
-    tests_require=['docker-registry-tools[test]']
+    tests_require=['docker-python-dev[test]']
 )

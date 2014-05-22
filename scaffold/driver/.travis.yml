@@ -27,11 +27,10 @@ python:
 # - tests and style dependencies
 # - package itself (usually cover requirements and version dependent additional packages)
 install:
-  - pip install docker-registry-tools[style]
-  - pip install docker-registry-tools[test]
+  - pip install docker-python-dev[style,test]
   - pip install .
 
 # Run flake8 & nose
-script: flake8 && python setup.py nosetests
+script: dpy style && dpy test
 
 after_success: coveralls

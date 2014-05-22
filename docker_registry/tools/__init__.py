@@ -35,14 +35,15 @@ __copyright__ = 'Copyright 2014'
 __credits__ = []
 
 __license__ = 'Apache 2.0'
-__version__ = '0.0.1'
+__version__ = '0.0.3'
 __maintainer__ = 'Mangled Deutz'
 __email__ = 'olivier@webitup.fr'
 __status__ = 'Production'
 
-__title__ = 'docker-registry-tools'
+__title__ = 'docker-python-dev'
 __build__ = 0x000000
 
 __url__ = 'https://github.com/dmp42/%s' % __title__
-__description__ = 'Docker registry tools'
+__description__ = 'Docker python developers tools'
+__keywords__ = 'docker registry python developer tools magic poney'
 __download__ = 'https://github.com/dmp42/%s/archive/master.zip' % __title__
