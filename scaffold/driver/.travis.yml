@@ -5,17 +5,17 @@ language: python
 # [must-comply]: what you MUST have
 
 # [fully-comply]
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-
-# [should-comply]
 # python:
 #   - "2.6"
 #   - "2.7"
+#   - "3.2"
+#   - "3.3"
+#   - "3.4"
+
+# [should-comply]
+python:
+  - "2.6"
+  - "2.7"
 #   - "3.4"
 
 # [must-comply]
